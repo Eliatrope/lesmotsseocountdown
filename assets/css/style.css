@@ -72,4 +72,8 @@
       left:100%;
     }
   }
+  #myCounter{
+    margin:auto;
+    text-align:center;
+  }
 }
