@@ -1,0 +1,11 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+/*Constants and variables*/
+  body{
+    background-color:#405da9;
+    margin:0;
+  }
+/*Mobile first | max-width: 320px*/
+@media all and (min-width:1px){
+  .main_container{
+    width:100%;
+  }
