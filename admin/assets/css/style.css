@@ -7,5 +7,20 @@
 /*Mobile first | max-width: 320px*/
 @media all and (min-width:1px){
   .main_container{
-    width:100%;
+    width:90%;
+    max-width:640px;
+    background-color:white;
+    margin:5% auto 0 auto;
+    border-radius:10px;
+  }
+  .main_container .main_header .main_logo{
+    max-width:200px;
+    display:block;
+    margin:0 auto 0 auto;
+    padding-top:5px;
+  }
+  .main_form{
+    width:90%;
+    display:block;
+    margin:10px auto 0 auto;
   }

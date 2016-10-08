@@ -35,6 +35,14 @@
             <input id="truedate" type="hidden" name="datecd"/>
             <input type="submit" value="change"/>
         </form>
+        <form action="" method="POST">
+          <input type="submit" value="dc" name="ntm"/>
+        </form>
+        <?php
+          if(isset($_POST['ntm'])){
+            session_destroy();
+          }
+        ?>
     </body>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-dateFormat.min"></script>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="assets/images/les_mots_seo_original.ico" rel='icon' type='img/ico' />
+    <title>Les Mots SEO</title>
   </head>
   <body>
     <section class="main_container">
