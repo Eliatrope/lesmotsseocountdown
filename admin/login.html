@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Les Mots SEO">
     <title>Les Mots SEO</title>
-    <link href="/assets/images/favicon/logopufrweb.ico" rel="icon" type="img/ico" />
+    <link href="assets/images/les_mots_seo_original.ico" rel="icon" type="img/ico" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -15,9 +15,12 @@
         <a href="../index.php"><img src="assets/images/les_mots_seo_original.png" alt="Les Mots SEO" title="Les Mots SEO" class="main_logo" /></a>
       </header>
       <form action="" method="POST" class="main_form">
-          <label><i class="fa fa-user-secret"></i></label>
-          <input type="text" placeholder="username" name="username"/>
-          <input type="password" placeholder="password" name="password"/>
+          <label for="uname"><i class="fa fa-user-secret"></i></label>
+          <input id="uname" type="text" placeholder="username" name="username"/>
+            <hr />
+          <label for="password"><i class="fa fa-unlock-alt"></i></label>
+          <input id="password" type="password" placeholder="password" name="password"/>
+            <hr />
           <input type="submit" value="login"/>
       </form>
     </section>

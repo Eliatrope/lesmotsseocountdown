@@ -23,4 +23,48 @@
     width:90%;
     display:block;
     margin:10px auto 0 auto;
+    font-family:'Oswald';
+    padding-bottom:5px;
   }
+  .main_form input[type="text"], .main_form input[type="password"]{
+    background-color: rgba(0,0,0,0) !important;
+    border: 0px;
+    outline: none;
+    padding-left:20px;
+    font-family:'Oswald';
+    font-weight:300;
+    width:200px;
+    color:#405da9;
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
+    color:#405da9;
+  }
+  .main_form label i{
+    font-size:20px;
+    color:#405da9;
+    width:20px;
+  }
+  .main_form input[type="submit"]{
+    display:block;
+    margin:5px auto 0 auto;
+    color:#405da9;
+    background-color:white;
+    width:60px;
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    border:1px solid #405da9;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-family:'Oswald';
+  }
+  .main_form hr{
+    display:block;
+    border:0;
+    height:1px;
+    width:90%;
+    margin:5px auto 5px auto;
+    background-color:#405da9;
+  }
+}
