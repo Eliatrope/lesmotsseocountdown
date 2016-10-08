@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+/*Constants and variables*/
+  body{
+    background-color:#405da9;
+    margin:0;
+  }
+/*Mobile first | max-width: 320px*/
+@media all and (min-width:1px){
+  .main_container{
+    width:100%;
+  }
+  .main_container .main_header .main_logo{
+    display:block;
+    margin:10px auto 0 auto;
+    max-width:200px;
+    animation-name:come-in;
+    animation-duration:2s;
+  }
+  @keyframes come-in{
+    from{
+      margin-top:-130px;
+      opacity:0;
+    }
+    to{
+      opacity:1;
+      margin-top:10px;
+    }
+  }
+  .main_container .main_header .main_title{
+    margin-top:30px;
+    font-weight:400;
+    text-transform:uppercase;
+    color:white;
+    text-shadow:1px 1px 1px rgba(0,0,0,.3);
+    font-family:'Oswald';
+    text-align:center;
+    animation-name:come-in-text;
+    animation-duration:2s;
+    animation-iteration-count:1;
+    position:relative;
+  }
+  @keyframes come-in-text{
+    from{
+      margin-left:-230px;
+      opacity:0;
+    }
+    to{
+      opacity:1;
+      margin-left:0;
+    }
+  }
+  .main_container .main_header .main_title img{
+    position:absolute;
+    width:70px;
+    left:-15%;
+    top:0px;
+    z-index:2;
+    opacity:.9;
+    animation-name:cloud-move;
+    animation-delay:2s;
+    animation-duration:30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes cloud-move{
+    from{
+      left:-15%;
+    }to{
+      left:100%;
+    }
+  }
+}
