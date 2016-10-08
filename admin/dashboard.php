@@ -1,6 +1,11 @@
 <?php
     session_start();
     require('config.php');
+    if(isset($_POST['logout']))
+    {
+      session_destroy();
+      header('Location:index.php');
+    }
     if (isset($_SESSION['username']) && isset($_SESSION['password']))
     {
         try
@@ -30,19 +35,14 @@
         <link href="/assets/images/favicon/logopufrweb.ico" rel='icon' type='img/ico' />
     </head>
     <body>
-        <input id="datetimepicker" type="text"/>
         <form action="" method="POST">
+            <input id="datetimepicker" type="text"/>
             <input id="truedate" type="hidden" name="datecd"/>
             <input type="submit" value="change"/>
         </form>
         <form action="" method="POST">
-          <input type="submit" value="dc" name="ntm"/>
+          <input type="submit" value="dc" name="logout"/>
         </form>
-        <?php
-          if(isset($_POST['ntm'])){
-            session_destroy();
-          }
-        ?>
     </body>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-dateFormat.min"></script>
