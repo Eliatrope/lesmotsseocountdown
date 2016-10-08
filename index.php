@@ -20,10 +20,10 @@
     </section>
     <script src="assets/js/jquery-2.2.0.min.js"></script>
     <script src="assets/js/jquery.mb-comingsoon.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
       $('#myCounter').mbComingsoon(new Date(2016, 5, 12, 9)) //Expires
       $('#myCounter').mbComingSoon('start')       // start counter
     </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
