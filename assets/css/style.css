@@ -1,0 +1,28 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+/*Constants and variables*/
+  body{
+    background-color:#405da9;
+  }
+/*Mobile first | max-width: 320px*/
+@media all and (min-width:1px){
+  .main_container{
+    width:100%;
+  }
+  .main_container .main_header .main_logo{
+    display:block;
+    margin:10px auto 0 auto;
+    max-width:200px;
+    animation-name:come-in;
+    animation-duration:2s;
+  }
+  @keyframes come-in{
+    from{
+      margin-top:-300px;
+      opacity:0;
+    }
+    to{
+      opacity:100%;
+      margin-top:10px;
+    }
+  }
+}

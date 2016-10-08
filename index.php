@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="FR-fr" dir="rtl">
+<html lang="FR-fr" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Les mots SEO">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="/assets/images/favicon/logopufrweb.ico" rel='icon' type='img/ico' />
+    <link href="assets/images/les_mots_seo_original.ico" rel='icon' type='img/ico' />
   </head>
+  <body>
+    <section class="main_container">
+      <header class="main_header">
+        <img class="main_logo" src="assets/images/les_mots_seo.png" alt="Les Mots SEO" title="Les Mots SEO" />
+      </header>
+    </section>
+    <script src="assets/js/jquery-2.2.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
