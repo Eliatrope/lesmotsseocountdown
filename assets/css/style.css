@@ -29,6 +29,7 @@
   }
   .main_container .main_header .main_title{
     margin-top:30px;
+    height:42px;
     font-weight:400;
     text-transform:uppercase;
     color:white;
@@ -39,6 +40,7 @@
     animation-duration:2s;
     animation-iteration-count:1;
     position:relative;
+    overflow:hidden;
   }
   @keyframes come-in-text{
     from{
