@@ -1,7 +1,6 @@
 <?php
     session_start();
-    $user = "root";
-    $pass = "";
+    require('config.php');
     try
     {
         $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
