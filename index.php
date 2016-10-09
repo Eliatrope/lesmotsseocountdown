@@ -25,6 +25,11 @@
         </h1>
       </header>
       <div id="myCounter"></div>
+      <h2 class="second_title">...Pour patienter, <br /> Je m'abonne à la newsletter</h2>
+      <form class="form_newsletter">
+        <input type="email" name="email" placeholder="moi@lesmotsseo.fr" />
+        <input type="submit" value="Envoyer" name="submit"/>
+      </form>
     </section>
     <script src="assets/js/jquery-2.2.0.min.js"></script>
     <script src="assets/js/jquery.mb-comingsoon.js"></script>

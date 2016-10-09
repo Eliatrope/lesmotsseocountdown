@@ -76,4 +76,35 @@
     margin:auto;
     text-align:center;
   }
+  .second_title{
+    font-family:'Oswald';
+    font-weight:300;
+    text-transform:uppercase;
+    color:white;
+    text-shadow:1px 1px 1px rgba(0,0,0,.3);
+    text-align:center;
+  }
+  .form_newsletter input[type="email"]{
+    background-color: rgba(0,0,0,0) !important;
+    outline:none;
+    border:1px solid white;
+    color:white;
+    text-align:center;
+    display:block;
+    margin:auto;
+    padding:5px;
+    font-family:'Oswald';
+    font-weight:300;
+    width:90%;
+    max-width:480px;
+  }
+  .form_newsletter input[type="submit"]{
+    display:block;
+    margin:10px auto 0 auto;
+    border-radius:5px;
+    padding:7px;
+    font-family:'Oswald';
+    text-transform:uppercase;
+    color:#405da9;
+  }
 }
