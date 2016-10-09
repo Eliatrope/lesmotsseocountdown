@@ -33,20 +33,27 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="assets/js/jquery.datetimepicker.css"/ >
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"/ >
         <meta name="description" content="Les mots SEO">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link href="assets/images/les_mots_seo_original.ico" rel='icon' type='img/ico' />
-        <title>Les Mots SEO</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+        <title>Admin Les Mots SEO</title>
     </head>
     <body>
-        <form action="" method="POST">
-            <input id="datetimepicker" type="text"/>
+      <section class="dashboard_container">
+        <header class="dashboard_header">
+          <a href="../index.php"><img class="main_logo" src="assets/images/les_mots_seo.png" alt="Les Mots SEO" title="Les Mots SEO" /></a>
+        </header>
+        <form action="" method="POST" class="dashboard_datepicker_form">
+            <input id="datetimepicker" type="text" placeholder="Cliquer pour ouvrir le calendrier"/>
             <input id="truedate" type="hidden" name="datecd"/>
-            <input type="submit" value="change"/>
+            <input type="submit" value="Changer la date de lancement"/>
         </form>
-        <form action="" method="POST">
-          <input type="submit" value="dc" name="logout"/>
+        <form class="form_deco" action="" method="POST">
+          <input type="submit" value="BYE o/" name="logout"/>
         </form>
+      </section>
     </body>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-dateFormat.min"></script>

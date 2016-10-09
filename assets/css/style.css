@@ -97,6 +97,11 @@
     font-weight:300;
     width:90%;
     max-width:480px;
+    transition:all .3s;
+  }
+  .form_newsletter input[type="email"]:focus{
+    background-color:white !important;
+    color:#405da9;
   }
   .form_newsletter input[type="submit"]{
     display:block;

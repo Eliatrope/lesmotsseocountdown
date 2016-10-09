@@ -67,4 +67,50 @@
     margin:5px auto 5px auto;
     background-color:#405da9;
   }
+
+  /*Style dashboard*/
+  .dashboard_container{
+    width:100%;
+  }
+  .dashboard_header .main_logo{
+    display:block;
+    margin:10px auto 0 auto;
+    max-width:200px;
+  }
+  .dashboard_container .dashboard_datepicker_form{
+    margin:10px auto 0 auto;
+    width:100%;
+  }
+  .dashboard_container .dashboard_datepicker_form input[type="text"]{
+    width:90%;
+    display:block;
+    margin:auto;
+    max-width:480px;
+    font-family:'Oswald';
+    text-align:center;
+    outline:none;
+  }
+  .dashboard_container .dashboard_datepicker_form input[type="submit"]{
+    display:block;
+    margin:10px auto 0 auto;
+    border-radius:5px;
+    padding:7px;
+    font-family:'Oswald';
+    text-transform:uppercase;
+    color:#405da9;
+  }
+  .dashboard_container .form_deco{
+    position:fixed;
+    z-index:999;
+    bottom:10px;
+    left:10px;
+  }
+  .dashboard_container .form_deco input[type="submit"]{
+    font-family:'Oswald';
+    background-color:white;
+    border:0;
+    border-radius:5px;
+    color:#405da9;
+    padding:5px;
+  }
 }
