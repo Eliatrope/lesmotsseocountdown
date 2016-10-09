@@ -29,12 +29,12 @@
                 $already_ex = true;
         }
         if (isset($already_ex))
-            echo "email already registered";
+            echo '<div class="main_denied">Email déjà enregistré <span class="main_close"></span></div>';
         else
         {
             $stmt = $dbh->prepare("INSERT INTO newsletter (email) VALUES (:email)");
             $stmt->execute(array(":email" => $t_hasher->HashPassword($email)));
-            echo "email successfully registered !";
+            echo '<div class="main_confirmation">Email enregistré avec succès! <span class="main_close"></span></div>';
         }
     }
 ?>

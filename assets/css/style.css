@@ -107,4 +107,39 @@
     text-transform:uppercase;
     color:#405da9;
   }
+  .main_confirmation{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:20px;
+    text-align:center;
+    z-index:999;
+    background-color:#084ab1;
+    color:white;
+    font-family:'Oswald';
+    padding:5px;
+  }
+  .main_denied{
+    background-color:#cc3333;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:20px;
+    text-align:center;
+    z-index:999;
+    color:white;
+    font-family:'Oswald';
+    padding:5px;
+  }
+  .main_close{
+    position:absolute;
+    right:15px;
+    top:25%;
+    font-size:20px;
+    border:1px solid white;
+    border-radius:50%;
+    width:10px;height:10px;
+    background-color:#c0c0c0;
+    cursor:pointer;
+  }
 }
