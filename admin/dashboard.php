@@ -32,7 +32,10 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="assets/js/jquery.datetimepicker.css"/ >
-        <link href="/assets/images/favicon/logopufrweb.ico" rel='icon' type='img/ico' />
+        <meta name="description" content="Les mots SEO">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link href="assets/images/les_mots_seo_original.ico" rel='icon' type='img/ico' />
+        <title>Les Mots SEO</title>
     </head>
     <body>
         <form action="" method="POST">
