@@ -67,9 +67,9 @@
     <script src="assets/js/jquery-2.2.0.min.js"></script>
     <script src="assets/js/jquery.mb-comingsoon.js"></script>
     <script type='text/javascript'>
+    var datecd = "<?php echo $datecd[0]; ?>";
     $('#myCounter').mbComingsoon({
-        expiryDate: new Date(<?php echo $datecd[0]; ?>),
-        speed: 100,
+        expiryDate: new Date(datecd)
     });
     </script>
     <script src="assets/js/main.js"></script>
