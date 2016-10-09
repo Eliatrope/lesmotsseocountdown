@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <?php
     require('admin/config.php');
-    $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-    $query = $dbh->exec("SELECT datecd FROM countdown");
+    try
+    {
+        $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $query = $dbh->query("SELECT datecd FROM countdown");
+        $datecd = $query->fetch();
+    }
+    catch(Exception $e)
+    {
+        echo "can't connect to database, please contact admin@admin.fr";
+        exit(0);
+    }
 ?>
 <html lang="FR-fr" dir="ltr">
   <head>
@@ -35,8 +44,7 @@
     <script src="assets/js/jquery.mb-comingsoon.js"></script>
     <script type='text/javascript'>
     $('#myCounter').mbComingsoon({
-        expiryDate: new Date(2016, 5, 12, 9),
-        //$('#myCounter').mbComingsoon(new Date(2016, 5, 12, 9)) //Expires
+        expiryDate: new Date(<?php echo $datecd[0]; ?>),
         speed: 100,
         callBack: function () {
             var today = new Date();

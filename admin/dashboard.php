@@ -11,11 +11,12 @@
         try
         {
             $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
+            $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             if (isset($_POST['datecd']))
             {
-                var_dump($_POST);
                 $datecd = $_POST['datecd'];
-                $dbh->exec("UPDATE countdown SET datecd =".$datecd." WHERE id=1");
+                $stmt = $dbh->prepare("UPDATE countdown SET datecd = :datecd");
+                $stmt->execute(array(":datecd" => $datecd));
             }
         }
         catch (Exception $e)
