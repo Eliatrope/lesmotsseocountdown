@@ -5,8 +5,8 @@
  * ========================================================================
  * Copyright 2014 Bruno Milgiaretti http://www.sisteminterattivi.org
  * Licensed under MIT http://opensource.org/licenses/MIT
- * ======================================================================== 
- Usage: 
+ * ========================================================================
+ Usage:
    Constructor:
 	$(selector).mbComingsoon(expiryDate Date or String) Expiry date of counter
 	$(selector).mbComingsoon(options plain Object) options: {
@@ -25,7 +25,7 @@
 	.mbComingSoon('stop') // stop counter
 	.mbComingSoon(options) // change options
 
- Note: Max time that the counter can display is 999 days 23h 59' 59". If time is greater hours, minutes and seconds will be displayed 
+ Note: Max time that the counter can display is 999 days 23h 59' 59". If time is greater hours, minutes and seconds will be displayed
  correctly, but days will be 999 until decrease under this quota.
  */
 
@@ -175,11 +175,11 @@
 					me.start();
 			}, i);
 		},
-		// Stop automatic update 
+		// Stop automatic update
 		stop: function () {
 			this.active = false;
 		},
-		// Animation of a single 
+		// Animation of a single
 		scrollNumber: function ($n1, $n2, value) {
 			if ($n1.hasClass('show')) {
 				$n2.removeClass('hidden-down')
