@@ -214,7 +214,7 @@
 		var defaults = {
 			interval: 1000,
 			callBack: null,
-			localization: { days: "days", hours: "hours", minutes: "minutes", seconds: "seconds" },
+			localization: { days: "jours", hours: "heures", minutes: "minutes", seconds: "secondes" },
             speed:500
 		}
 		var options = {};

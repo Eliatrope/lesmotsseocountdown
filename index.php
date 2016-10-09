@@ -70,11 +70,6 @@
     $('#myCounter').mbComingsoon({
         expiryDate: new Date(<?php echo $datecd[0]; ?>),
         speed: 100,
-        callBack: function () {
-            var today = new Date();
-            var tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate() + 3);
-            $('#myCounter').mbComingsoon({expiryDate: tomorrow})
-        },
     });
     </script>
     <script src="assets/js/main.js"></script>
