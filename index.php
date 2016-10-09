@@ -26,7 +26,7 @@
       </header>
       <div id="myCounter"></div>
       <h2 class="second_title">...Pour patienter, <br /> Je m'abonne à la newsletter</h2>
-      <form class="form_newsletter">
+      <form action="" method="POST" class="form_newsletter">
         <input type="email" name="email" placeholder="moi@lesmotsseo.fr" />
         <input type="submit" value="Envoyer" name="submit"/>
       </form>
