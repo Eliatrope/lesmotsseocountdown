@@ -1,6 +1,8 @@
 <?php
     session_start();
     require('config.php');
+    require('PasswordHash.php');
+    $t_hasher = new PasswordHash(8, FALSE);
     try
     {
         $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
@@ -15,16 +17,19 @@
     {
         if (isset($_POST['username']) && isset($_POST['password']))
         {
-            $query = $dbh->prepare("SELECT username, password FROM users WHERE username = :username AND password = :password");
-            $query->bindParam(":username", $_POST['username'], PDO::PARAM_STR);
-            $query->bindParam(":password", $_POST['password'], PDO::PARAM_STR);
-            $query->execute();
-
-            if ($query->rowCount() == 1)
+            $stmt = $dbh->prepare("SELECT password FROM users WHERE username = :username");
+            $stmt->bindParam(":username", $_POST['username'], PDO::PARAM_STR);
+            $stmt->execute();
+            if ($password = $stmt->fetch())
             {
-                $_SESSION['username'] = $_POST['username'];
-                $_SESSION['password'] = $_POST['password'];
-                header('Location:dashboard.php');
+                if ($t_hasher->CheckPassword($_POST['password'], $password[0]))
+                {
+                    $_SESSION['username'] = $_POST['username'];
+                    $_SESSION['password'] = $_POST['password'];
+                    header('Location:dashboard.php');
+                }
+                else
+                    header('Location:index.php');
             }
             else
                 header('Location:index.php');
