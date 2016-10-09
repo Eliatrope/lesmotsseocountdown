@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <?php
     require('admin/config.php');
-    require('admin/PasswordHash.php');
     try
     {
         $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
@@ -18,14 +17,13 @@
     if (isset($_POST['email']))
     {
         $email = $_POST['email'];
-        $t_hasher = new PasswordHash(8, FALSE);
         $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         $query = $dbh->query("SELECT email FROM newsletter");
         $all_mail = $query->fetchAll();
         foreach($all_mail as $key => $mail)
         {
-            if ($t_hasher->CheckPassword($email, $mail[0]) == 1)
+            if (strtolower($email) == strtolower($mail[0]))
                 $already_ex = true;
         }
         if (isset($already_ex))
@@ -33,7 +31,7 @@
         else
         {
             $stmt = $dbh->prepare("INSERT INTO newsletter (email) VALUES (:email)");
-            $stmt->execute(array(":email" => $t_hasher->HashPassword($email)));
+            $stmt->execute(array(":email" => $email));
             echo '<div class="main_confirmation">Email enregistré avec succès! <span class="main_close"></span></div>';
         }
     }
