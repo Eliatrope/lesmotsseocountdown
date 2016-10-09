@@ -12,11 +12,14 @@
         {
             $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
             $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $query = $dbh->query("SELECT id, email FROM newsletter");
+            $emails = $query->fetchAll();
             if (isset($_POST['datecd']))
             {
                 $datecd = $_POST['datecd'];
                 $stmt = $dbh->prepare("UPDATE countdown SET datecd = :datecd");
                 $stmt->execute(array(":datecd" => $datecd));
+                echo "Date successfully changed";
             }
         }
         catch (Exception $e)
@@ -50,6 +53,31 @@
             <input id="truedate" type="hidden" name="datecd"/>
             <input type="submit" value="Changer la date de lancement"/>
         </form>
+        <button id="toggle_list">Afficher les emails inscrits à la newsletter</button>
+        <div id="email_list">
+            <?php
+                foreach ($emails as $key => $email)
+                {
+                    echo "<br>id: ".$key." | email: ".$email['email'];
+                }
+            ?>
+        </div>
+        <br>
+        <button id="toggle_rdy">Ready to send</button>
+        <div id="email_rdy">
+            <?php
+                $i = count($emails);
+                $j = 1;
+                foreach ($emails as $email)
+                {
+                    if ($i == $j)
+                        echo $email['email'];
+                    else
+                        echo $email['email'].", ";
+                    $j++;
+                }
+            ?>
+        </div>
         <form class="form_deco" action="" method="POST">
           <input type="submit" value="BYE o/" name="logout"/>
         </form>
@@ -59,11 +87,21 @@
     <script src="assets/js/jquery-dateFormat.min"></script>
     <script src="assets/js/build/jquery.datetimepicker.full.min.js"></script>
     <script type='text/javascript'>
+        $('#email_list').hide();
+        $('#email_rdy').hide();
         $('#datetimepicker').datetimepicker();
         $('#datetimepicker').on('change', function()
         {
             var d = new Date($('#datetimepicker').val()).getTime();
              $('#truedate').val(DateFormat.format.date(d, "E MMM dd yyyy HH:mm:ss"));
+        });
+        $('#toggle_list').click(function()
+        {
+            $('#email_list').toggle();
+        });
+        $('#toggle_rdy').click(function()
+        {
+            $('#email_rdy').toggle();
         });
     </script>
 </html>
