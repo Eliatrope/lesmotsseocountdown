@@ -56,7 +56,7 @@
         $('#datetimepicker').on('change', function()
         {
             var d = new Date($('#datetimepicker').val()).getTime();
-             $('#truedate').val(DateFormat.format.date(d, "yyyy, M, d, H"));
+             $('#truedate').val(DateFormat.format.date(d, "E MMM dd yyyy HH:mm:ss"));
         });
     </script>
 </html>
