@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <?php
     require('admin/config.php');
+    require('admin/PasswordHash.php');
     try
     {
         $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
         $query = $dbh->query("SELECT datecd FROM countdown");
         $datecd = $query->fetch();
+        $dbh = null;
     }
     catch(Exception $e)
     {
         echo "can't connect to database, please contact admin@admin.fr";
         exit(0);
+    }
+    if (isset($_POST['email']))
+    {
+        $email = $_POST['email'];
+        $t_hasher = new PasswordHash(8, FALSE);
+        $dbh = new PDO('mysql:host=localhost;dbname=lmscountdown', $user, $pass);
+        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+        $query = $dbh->query("SELECT email FROM newsletter");
+        $all_mail = $query->fetchAll();
+        foreach($all_mail as $key => $mail)
+        {
+            if ($t_hasher->CheckPassword($email, $mail[0]) == 1)
+                $already_ex = true;
+        }
+        if (isset($already_ex))
+            echo "email already registered";
+        else
+        {
+            $stmt = $dbh->prepare("INSERT INTO newsletter (email) VALUES (:email)");
+            $stmt->execute(array(":email" => $t_hasher->HashPassword($email)));
+            echo "email successfully registered !";
+        }
     }
 ?>
 <html lang="FR-fr" dir="ltr">
