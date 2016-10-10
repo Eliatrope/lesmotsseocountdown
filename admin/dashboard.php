@@ -59,18 +59,20 @@
         <button id="toggle_list">Afficher les emails inscrits à la newsletter</button>
         <div id="email_list">
           <table class="the_table_email">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Email</th>
+              </tr>
+            </thead>
             <tbody>
             <?php
                 foreach ($emails as $key => $email)
                 {
                     echo
                       '<tr>'.
-                        '<th>ID</th>'.
-                        '<th>Email</th>'.
-                      '</tr>'.
-                      '<tr>'.
                         '<td>'.$key.'</td>'.
-                         '<td>'.$email["email"].'</td>'.
+                        '<td>'.$email["email"].'</td>'.
                       '</tr>';
                 }
             ?>

@@ -149,14 +149,16 @@
     margin:10px auto 10px auto;
     font-family:'Oswald';
     color:white;
+    text-align:center;
+    table-layout:fixed;
   }
-  .dashboard_container .the_table_email tr th:first-child{
+  .dashboard_container .the_table_email thead tr th:first-child{
+    border:1px solid white;
     width:15%;
-    border:1px solid white;
   }
-  .dashboard_container .the_table_email tr th:last-child{
-    width:85%;
+  .dashboard_container .the_table_email thead tr th:last-child{
     border:1px solid white;
+    width:85%;
   }
   .dashboard_container .the_table_email tr td{
     border:1px solid white;
@@ -171,6 +173,7 @@
     font-weight:300;
     word-break:break-all;
     margin:10px auto 10px auto;
+    text-align:center;
   }
   .main_confirmation{
     position:fixed;
