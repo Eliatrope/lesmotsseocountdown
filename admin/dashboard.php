@@ -19,7 +19,7 @@
                 $datecd = $_POST['datecd'];
                 $stmt = $dbh->prepare("UPDATE countdown SET datecd = :datecd");
                 $stmt->execute(array(":datecd" => $datecd));
-                echo "Date successfully changed";
+                echo '<div class="main_confirmation">Date de lancement modifiée avec succès! <span class="main_close"></span></div>';
             }
         }
         catch (Exception $e)
@@ -53,17 +53,32 @@
             <input id="truedate" type="hidden" name="datecd"/>
             <input type="submit" value="Changer la date de lancement"/>
         </form>
+          <hr class="my_hr_is_rich" />
+        <h1 class="title_modemail">Module Email</h1>
+          <hr class="my_hr_is_rich" />
         <button id="toggle_list">Afficher les emails inscrits à la newsletter</button>
         <div id="email_list">
+          <table class="the_table_email">
+            <tbody>
             <?php
                 foreach ($emails as $key => $email)
                 {
-                    echo "<br>id: ".$key." | email: ".$email['email'];
+                    echo
+                      '<tr>'.
+                        '<th>ID</th>'.
+                        '<th>Email</th>'.
+                      '</tr>'.
+                      '<tr>'.
+                        '<td>'.$key.'</td>'.
+                         '<td>'.$email["email"].'</td>'.
+                      '</tr>';
                 }
             ?>
+            </tbody>
+          </table>
         </div>
         <br>
-        <button id="toggle_rdy">Ready to send</button>
+        <button id="toggle_rdy">Prêts à être envoyés</button>
         <div id="email_rdy">
             <?php
                 $i = count($emails);
@@ -84,6 +99,7 @@
       </section>
     </body>
     <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery-dateFormat.min"></script>
     <script src="assets/js/build/jquery.datetimepicker.full.min.js"></script>
     <script type='text/javascript'>

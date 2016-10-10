@@ -89,6 +89,7 @@
     font-family:'Oswald';
     text-align:center;
     outline:none;
+    color:#405da9;
   }
   .dashboard_container .dashboard_datepicker_form input[type="submit"]{
     display:block;
@@ -112,5 +113,86 @@
     border-radius:5px;
     color:#405da9;
     padding:5px;
+  }
+  .dashboard_container .my_hr_is_rich{
+    border:0;
+    height:1px;
+    background-color:white;
+    width:90%;
+    max-width:480px;
+    margin:15px auto 15px auto;
+    display:block;
+  }
+  .dashboard_container .title_modemail{
+    color:white;
+    font-family:'Oswald';
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:300;
+  }
+  .dashboard_container #toggle_list, .dashboard_container #toggle_rdy{
+    display:block;
+    margin:10px auto 0 auto;
+    border-radius:5px;
+    padding:7px;
+    font-family:'Oswald';
+    text-transform:uppercase;
+    color:#405da9;
+    outline:none;
+  }
+  .dashboard_container .the_table_email{
+    word-break:break-all;
+    border-collapse:collapse;
+    width:90%;
+    max-width:480px;
+    display:block;
+    margin:10px auto 10px auto;
+    font-family:'Oswald';
+    color:white;
+  }
+  .dashboard_container .the_table_email tr th:first-child{
+    width:15%;
+    border:1px solid white;
+  }
+  .dashboard_container .the_table_email tr th:last-child{
+    width:85%;
+    border:1px solid white;
+  }
+  .dashboard_container .the_table_email tr td{
+    border:1px solid white;
+    text-align:center;
+    font-weight:300;
+  }
+  .dashboard_container #email_rdy{
+    font-family:'Oswald';
+    width:90%;
+    max-width:480px;
+    color:white;
+    font-weight:300;
+    word-break:break-all;
+    margin:10px auto 10px auto;
+  }
+  .main_confirmation{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:20px;
+    text-align:center;
+    z-index:999;
+    background-color:#084ab1;
+    color:white;
+    font-family:'Oswald';
+    padding:5px;
+  }
+  .main_close{
+    position:absolute;
+    right:15px;
+    top:25%;
+    font-size:20px;
+    border:1px solid white;
+    border-radius:50%;
+    width:10px;height:10px;
+    background-color:#c0c0c0;
+    cursor:pointer;
   }
 }
